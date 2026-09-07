@@ -222,7 +222,7 @@ function makeAllergenBadge(code) {
   const img = document.createElement("img");
   const label = ALLERGEN_LABELS[code] || code;
   img.className = "al";
-  img.src = `assets/images/allergens/${code}.png`;
+  img.src = `${code}.png`;
   img.alt = label;
   img.title = label;
   img.loading = "lazy";
@@ -236,7 +236,7 @@ function buildItem(item) {
   if (item.foto) {
     const photo = document.createElement("img");
     photo.className = "item-photo";
-    photo.src = `assets/images/${item.foto}`;
+    photo.src = `${item.foto}`;
     photo.alt = item.nombre || "Plato";
     photo.loading = "lazy";
     photo.addEventListener("error", () => photo.remove());
