@@ -1,0 +1,43 @@
+CERVECERÍA EL DECANO — PUESTA EN MARCHA RÁPIDA
+
+OBJETIVO
+- La web se aloja gratis en GitHub Pages.
+- El QR apunta siempre a esa misma URL.
+- José cambia platos y precios desde Google Sheets, sin tocar código.
+
+PASO 1 — PROBAR LA CARTA
+Puedes subir ya esta carpeta a GitHub Pages incluso sin Google Sheets.
+Mientras GOOGLE_SHEET_URL esté vacío, la web usa la carta local incluida.
+
+PASO 2 — CREAR LA HOJA DE GOOGLE SHEETS
+1. En Google Drive crea una hoja nueva.
+2. Archivo > Importar > Subir.
+3. Importa: data/PLANTILLA_GOOGLE_SHEETS.csv
+4. Comparte esa hoja con José como EDITOR.
+
+PASO 3 — PUBLICAR LA HOJA PARA QUE LA WEB PUEDA LEERLA
+1. En Google Sheets: Archivo > Compartir > Publicar en la web.
+2. Elige la hoja de la carta.
+3. Elige CSV / valores separados por comas.
+4. Pulsa Publicar y copia el enlace.
+
+PASO 4 — CONECTAR LA CARTA
+1. Abre js/app.js.
+2. Busca al principio:
+   const GOOGLE_SHEET_URL = "";
+3. Pega el enlace CSV entre las comillas.
+4. Guarda el archivo en GitHub.
+
+PASO 5 — CAMBIOS DEL DÍA A DÍA
+- Cambiar precio: editar precio o precio2.
+- Ocultar un plato: disponible = NO.
+- Volver a mostrarlo: disponible = SI.
+- Añadir plato: nueva fila.
+- Añadir categoría: escribir un nombre nuevo en categoria.
+
+IMPORTANTE
+El QR NO se genera hasta que GitHub Pages tenga su URL definitiva.
+Cuando tengamos esa URL, se crea un QR estático y no habrá que cambiarlo por modificar precios o platos.
+
+FUENTE USADA
+La carta base de esta versión sigue "Carta_El_Decano_para_Jose (1).pdf", que coincide con el ZIP de Claude.
